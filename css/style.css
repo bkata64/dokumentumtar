@@ -47,3 +47,7 @@ header a img {
         width: 1rem;
     }       
 }
+
+table, th, td {
+    border: 1px solid lightgrey;
+}
