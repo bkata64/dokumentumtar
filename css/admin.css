@@ -22,13 +22,6 @@ nav .nav-item:hover a{
     color: white !important;
 }
 
-main .table, main h3 {
-    width: 90%;
-    margin-left: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 main form {
     width: 90%;
     margin-left: 50px;    
@@ -52,4 +45,20 @@ form div[class*="row"] {
 
 form .row>div>label, form .row>label {
     font-weight: bold;
+}
+
+main .table, main h3 {
+    width: 100%;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}  
+
+@media screen and (min-width:1200px) {
+    main .table, main h3 {
+        width: 90%;
+        margin-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
 }

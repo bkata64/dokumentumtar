@@ -37,10 +37,10 @@ header a img {
 }
 
 @media screen and (max-width:656px) {
-    body {
+    body, button {
         font-size: .6rem;            
     }
-    h1, h2 {
+    h1, h2, button {
         font-size: .7rem;    
     }   
     header a img {
@@ -51,3 +51,8 @@ header a img {
 table, th, td {
     border: 1px solid lightgrey;
 }
+
+.rejtett {
+    display: none;
+}
+
