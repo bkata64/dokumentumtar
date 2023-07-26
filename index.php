@@ -1,3 +1,9 @@
+<? 
+include_once('php/Documents.php');
+
+$documents = new Documents();
+
+?>
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -35,6 +41,7 @@
                     <button type="button" name="submit" id="submit" class="btn btn-info btn-sm search">&#128269; Keresés</button>
                     <button type="reset" name="reset" id="reset" class="btn btn-danger btn-sm cancel rejtett">&#9938; Mégse</button>
                 </form>
+                <!-- <? debug( $documents->getDocuments()) ?> -->
                 <table class="table table-striped">
                     <tr>
                         <th>Cím</th>
@@ -42,7 +49,15 @@
                         <th>Kiadta</th>
                         <th>Rövid szöveg</th>
                     </tr>
-                    <tr>
+                    <? foreach ($documents->getDocuments() as $key => $document) { ?>
+                        <tr>
+                            <td><?= $document['title'] ?></td>
+                            <td><?= $document['category'] ?></td>
+                            <td><?= $document['publisher'] ?></td>
+                            <td><?= $document['short_text'] ?></td>
+                        </tr>
+                    <? } ?>
+                    <!-- <tr>
                         <td>Kártya kiadás</td>
                         <td>intézkedési terv, utasítás</td>
                         <td>Ügyvezetés</td>
@@ -59,9 +74,9 @@
                         <td>intézkedési terv</td>
                         <td>HR osztály</td>
                         <td>A munkavállaló...</td>
-                    </tr>
+                    </tr> -->
                     <tr>
-                        <td colspan="4" class="text-center">Összesen megjelenítve x dokumentum</td>
+                        <td colspan="4" class="text-center">Összesen megjelenítve <?=count($documents->getDocuments()) ?> dokumentum</td>
                     </tr>
                 </table>
             </div>
