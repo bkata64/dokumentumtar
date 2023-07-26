@@ -42,8 +42,26 @@ class Application {
         return $resultList;
     }
 
-    protected function writeLog($string, $sql) {
+    protected function getSingleResult($sql) {
+        $resultList = $this->getResultList($sql);
+        if(!$resultList) {
+            $this->writeLog("nem talált értéket a lekérdezés", $sql);
+            return array();
+        } else {
+            return $resultList[0];
+        }
+    }
 
+    public function writeLog($string, $sql = null) {
+        $logStr = $string;
+
+        if($sql !== null) {
+            $logStr .= " -- SQL QUERY: " . $sql;
+        }
+
+        $log = fopen("log/log.txt", "a");
+        fwrite($log, $logStr);
+        fclose($log);
     }
 
     protected function isValidId($id) {
@@ -52,6 +70,12 @@ class Application {
         } else {
             return false;
         }
+    }
+
+
+    protected function deleteRekordById($table, $id) {
+        $result = $this->connection->query("delete from $table where id = $id");
+        return $result;
     }
 }
 

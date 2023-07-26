@@ -2,7 +2,7 @@
 include_once('php/Documents.php');
 
 $documents = new Documents();
-
+// $documents->writeLog("első log bejegyzésünk!!");
 ?>
 <!DOCTYPE html>
 <html lang="hu">
@@ -51,30 +51,12 @@ $documents = new Documents();
                     </tr>
                     <? foreach ($documents->getDocuments() as $key => $document) { ?>
                         <tr>
-                            <td><?= $document['title'] ?></td>
+                            <td><a href="detail.php?document=<?= $document['id'] ?>"><?= $document['title'] ?></a></td>
                             <td><?= $document['category'] ?></td>
                             <td><?= $document['publisher'] ?></td>
                             <td><?= $document['short_text'] ?></td>
                         </tr>
-                    <? } ?>
-                    <!-- <tr>
-                        <td>Kártya kiadás</td>
-                        <td>intézkedési terv, utasítás</td>
-                        <td>Ügyvezetés</td>
-                        <td>Sed vitae lectus sapien</td>
-                    </tr>
-                    <tr>
-                        <td>Nyilatkozat</td>
-                        <td>nyomtatvány</td>
-                        <td>HR osztály</td>
-                        <td>Új belépő esetén...</td>
-                    </tr>
-                    <tr>
-                        <td>Pótszabadság igénylés</td>
-                        <td>intézkedési terv</td>
-                        <td>HR osztály</td>
-                        <td>A munkavállaló...</td>
-                    </tr> -->
+                    <? } ?>                    
                     <tr>
                         <td colspan="4" class="text-center">Összesen megjelenítve <?=count($documents->getDocuments()) ?> dokumentum</td>
                     </tr>

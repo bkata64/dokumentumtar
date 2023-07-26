@@ -1,3 +1,10 @@
+<? 
+include_once('../php/Documents.php');
+
+$documents = new Documents();
+
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -11,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="../js/admin_script.js"></script>
 </head>
 <body>
     <header class="container-fluid">       
@@ -34,28 +41,28 @@
                 <nav class="navbar pt-0">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                          <a class="nav-link" href="listak.html" >Listák</a>                          
+                          <a class="nav-link" href="listak.php" >Listák</a>                          
                         </li>
                         <li class="nav-item text-end">
-                            <a class="nav-link" href="kategoria_form.html">Új kategória</a>
+                            <a class="nav-link" href="kategoria_form.php">Új kategória</a>
                         </li>
                         <li class="nav-item text-end">
-                            <a class="nav-link" href="kiado_form.html">Új kiadó</a>
+                            <a class="nav-link" href="kiado_form.php">Új kiadó</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="dokumentumok.html">Dokumentumok</a>                            
+                            <a class="nav-link active" href="dokumentumok.php">Dokumentumok</a>                            
                         </li>
                         <li class="nav-item text-end">                            
-                            <a class="nav-link" href="dokumentum_form.html">Új dokumentum</a>                            
+                            <a class="nav-link" href="dokumentum_form.php">Új dokumentum</a>                            
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="felhasznalok.html">Felhasználók</a>                            
+                            <a class="nav-link" href="felhasznalok.php">Felhasználók</a>                            
                         </li>
                         <li class="nav-item text-end">
-                            <a class="nav-link" href="felhasznalo_form.html">Új felhasználó</a>
+                            <a class="nav-link" href="felhasznalo_form.php">Új felhasználó</a>
                         </li>
                         <li class="nav-item text-end">
-                            <a class="nav-link" href="jogosultsag_form.html">Új jogosultság</a>
+                            <a class="nav-link" href="jogosultsag_form.php">Új jogosultság</a>
                         </li>
                     </ul>
                 </nav>
@@ -79,7 +86,21 @@
                         <th>Jogosultság</th>
                         <th class="text-center">Funkciók</th>
                     </tr>
-                    <tr>
+                    <? foreach ($documents->getDocuments() as $key => $document) { ?>
+                        <tr>
+                            <td><?= $document['title'] ?></td>
+                            <td><?= $document['category'] ?></td>
+                            <td><?= $document['publisher'] ?></td>
+                            <td><?= $document['short_text'] ?></td>
+                            <td><?= $document['role'] ?></td>
+                            <td class="functions">
+                                <a href="dokumentum_form.php?document=<?= $document['id'] ?>"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
+                                <a href="#" class="delete_rec" table="documents" rec_id="<?= $document['id'] ?>"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
+                            </td>
+                            
+                        </tr>
+                    <? } ?>                    
+                    <!-- <tr>
                         <td>Kártya kiadás</td>
                         <td>intézkedési terv, utasítás</td>
                         <td>Ügyvezetés</td>
@@ -111,7 +132,7 @@
                             <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
                             <a href="#"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
                         </td>
-                    </tr>                    
+                    </tr>                     -->
                 </table>                
             </div>            
         </div>

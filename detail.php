@@ -1,3 +1,10 @@
+<? 
+include_once('php/Documents.php');
+
+$documents = new Documents();
+$document = $documents->getDocumentById(intval($_GET['document']));
+
+?>
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -28,7 +35,21 @@
     </header>
     <main class="container-fluid">
         <div class="row">
-            
+        <div class="col-lg-5 offset-4 p-0" id="reszletek">
+                <header class="mr-5">               
+                    <h2 class="mb-3 bg-secondary p-2">Dokumentum részletes nézete</h2>
+                    <div class="px-3">
+                        <span><img src="" alt="<?= $document['title'] ?>" title="<?= $document['title'] ?>"></span>
+                        <span class="float-end"><?= $document['category'] ?></span>
+                    </div>
+                </header>
+                <div class="p-4 mr-2">
+                    <h3><?= $document['title'] ?></h3>
+                    <p><?= $document['content'] ?></p>
+                    
+                    <p class="text-end" id="author"><?= $document['publisher'] ?></p>
+                </div>
+            </div>
         </div>
     </main>
     

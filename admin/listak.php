@@ -1,3 +1,12 @@
+<? 
+include_once('../php/Categories.php');
+include_once('../php/Publishers.php');
+
+$categories = new Categories();
+$publishers = new Publishers();
+
+?>
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
@@ -8,8 +17,10 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="../js/admin_script.js"></script>
 </head>
 <body>
     <header class="container-fluid">       
@@ -32,28 +43,28 @@
                 <nav class="navbar pt-0">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                          <a class="nav-link active" href="listak.html" >Listák</a>                          
+                          <a class="nav-link active" href="listak.php" >Listák</a>                          
                         </li>
                         <li class="nav-item text-end">
-                            <a class="nav-link" href="kategoria_form.html">Új kategória</a>
+                            <a class="nav-link" href="kategoria_form.php">Új kategória</a>
                         </li>
                         <li class="nav-item text-end">
-                            <a class="nav-link" href="kiado_form.html">Új kiadó</a>
+                            <a class="nav-link" href="kiado_form.php">Új kiadó</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="dokumentumok.html">Dokumentumok</a>                            
+                            <a class="nav-link" href="dokumentumok.php">Dokumentumok</a>                            
                         </li>
                         <li class="nav-item text-end">                            
-                            <a class="nav-link" href="dokumentum_form.html">Új dokumentum</a>                            
+                            <a class="nav-link" href="dokumentum_form.php">Új dokumentum</a>                            
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="felhasznalok.html">Felhasználók</a>                            
+                            <a class="nav-link" href="felhasznalok.php">Felhasználók</a>                            
                         </li>
                         <li class="nav-item text-end">
-                            <a class="nav-link" href="felhasznalo_form.html">Új felhasználó</a>
+                            <a class="nav-link" href="felhasznalo_form.php">Új felhasználó</a>
                         </li>
                         <li class="nav-item text-end">
-                            <a class="nav-link" href="jogosultsag_form.html">Új jogosultság</a>
+                            <a class="nav-link" href="jogosultsag_form.php">Új jogosultság</a>
                         </li>
                     </ul>
                 </nav>
@@ -66,14 +77,16 @@
                         <th>Kategória</th>
                         <th class="text-center">Funkciók</th>
                     </tr>
-                    <tr>
-                        <td>intézkedési terv</td>
-                        <td class="functions">
-                            <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
-                            <a href="#"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
-                        </td>
-                    </tr>
-                    <tr>
+                    <? foreach ($categories->getCategories() as $key => $category) { ?>
+                        <tr>
+                            <td><?= $category['name'] ?></td>
+                            <td class="functions">
+                                <a href="kategoria_form.php?category=<?= $category['id'] ?>"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
+                                <a href="#" class="delete_rec" table="categories" rec_id="<?= $category['id'] ?>"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
+                            </td>
+                        </tr>
+                    <? } ?>
+                    <!-- <tr>
                         <td>utasítás</td>
                         <td class="functions">
                             <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
@@ -86,7 +99,7 @@
                             <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
                             <a href="#"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
                         </td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
             <div class="col-sm-5">
@@ -96,14 +109,16 @@
                         <th>Név</th>
                         <th class="text-center">Funkciók</th>
                     </tr>
-                    <tr>
-                        <td>Ügyvezetés</td>
-                        <td class="functions">
-                            <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
-                            <a href="#"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
-                        </td>
-                    </tr>
-                    <tr>
+                    <? foreach ($publishers->getPublishers() as $key => $publisher) { ?>
+                        <tr>
+                            <td><?= $publisher['name'] ?></td>
+                            <td class="functions">
+                                <a href="kiado_form.php?publisher=<?= $publisher['id'] ?>"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
+                                <a href="#" class="delete_rec" table="publishers" rec_id="<?= $publisher['id'] ?>"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
+                            </td>
+                        </tr>
+                    <? } ?>
+                    <!-- <tr>
                         <td>HR osztály</td>
                         <td class="functions">
                             <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
@@ -116,7 +131,7 @@
                             <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
                             <a href="#"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
                         </td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
         </div>
