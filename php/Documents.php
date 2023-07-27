@@ -23,14 +23,15 @@ class Documents extends Application {
     );
 
     public function __construct() {
-        parent::__construct();
-        // if($this->isDbConnectionLive()) {
-        //     echo 'db kapcsolat él';
-        // } else {
-        //     echo 'db kapcsolat nincs meg';
-        // }
+        parent::__construct();       
+    }
 
-        // debug($this->getResultList("select * from documents"));
+    public function index() {
+        $this->template = 'frontend';
+    }
+
+    public function backend() {
+        $this->template = 'admin/dokumentumok';
     }
 
     public function getDocuments() {

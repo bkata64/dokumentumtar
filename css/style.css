@@ -56,3 +56,15 @@ table, th, td {
     display: none;
 }
 
+.error_msg {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.msg {
+    margin: 20px 5px;
+    width: 90%;
+    line-height: 50px;
+}
+

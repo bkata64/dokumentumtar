@@ -11,10 +11,16 @@ class Application {
     );
 
     private $connection;
-    private $connectionLive = false; 
+    private $connectionLive = false;
+    
+    protected $template = '';
 
     public function __construct() {
         $this->connectDb();
+    }
+
+    public function getTemplate() {
+        return $this->template;
     }
 
     private function connectDb() {
@@ -77,6 +83,7 @@ class Application {
         $result = $this->connection->query("delete from $table where id = $id");
         return $result;
     }
+    
 }
 
 ?>

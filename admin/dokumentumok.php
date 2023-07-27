@@ -1,9 +1,4 @@
-<? 
-include_once('../php/Documents.php');
 
-$documents = new Documents();
-
-?>
 
 <!DOCTYPE html>
 <html lang="hu">
@@ -12,8 +7,8 @@ $documents = new Documents();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dokumentumtár</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -28,7 +23,7 @@ $documents = new Documents();
                 <span class="float-end">
                     <img src="" alt="avatar">
                     <span id="user">Felhasználó neve</span>
-                    <a href="../index.html"><img src="../img/logout.png" alt="kilépés" title="kilépés"></a>
+                    <a href="index.html"><img src="img/logout.png" alt="kilépés" title="kilépés"></a>
                 </span>
                 
             </div>            
@@ -86,7 +81,7 @@ $documents = new Documents();
                         <th>Jogosultság</th>
                         <th class="text-center">Funkciók</th>
                     </tr>
-                    <? foreach ($documents->getDocuments() as $key => $document) { ?>
+                    <? foreach ($object->getDocuments() as $key => $document) { ?>
                         <tr>
                             <td><?= $document['title'] ?></td>
                             <td><?= $document['category'] ?></td>
@@ -94,45 +89,12 @@ $documents = new Documents();
                             <td><?= $document['short_text'] ?></td>
                             <td><?= $document['role'] ?></td>
                             <td class="functions">
-                                <a href="dokumentum_form.php?document=<?= $document['id'] ?>"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
-                                <a href="#" class="delete_rec" table="documents" rec_id="<?= $document['id'] ?>"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
+                                <a href="dokumentum_form.php?document=<?= $document['id'] ?>"><img src="img/edit.png" alt="módosítás" title="módosítás"></a>
+                                <a href="#" class="delete_rec" table="documents" rec_id="<?= $document['id'] ?>"><img src="img/delete.png" alt="törlés" title="törlés"></a>
                             </td>
                             
                         </tr>
-                    <? } ?>                    
-                    <!-- <tr>
-                        <td>Kártya kiadás</td>
-                        <td>intézkedési terv, utasítás</td>
-                        <td>Ügyvezetés</td>
-                        <td>Sed vitae lectus sapien</td>
-                        <td>titkárnő</td>
-                        <td class="functions">
-                            <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
-                            <a href="#"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Nyilatkozat</td>
-                        <td>nyomtatvány</td>
-                        <td>HR osztály</td>
-                        <td>Új belépő esetén...</td>
-                        <td>HR asszisztens</td>
-                        <td class="functions">
-                            <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
-                            <a href="#"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Pótszabadság igénylés</td>
-                        <td>intézkedési terv</td>
-                        <td>HR osztály</td>
-                        <td>A munkavállaló...</td>
-                        <td>bárki</td>
-                        <td class="functions">
-                            <a href="#"><img src="../img/edit.png" alt="módosítás" title="módosítás"></a>
-                            <a href="#"><img src="../img/delete.png" alt="törlés" title="törlés"></a>
-                        </td>
-                    </tr>                     -->
+                    <? } ?>              
                 </table>                
             </div>            
         </div>
