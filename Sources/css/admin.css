@@ -1,0 +1,50 @@
+main form {
+    width: 90%;
+    margin-left: 50px;    
+}
+
+.functions a img {
+    width: 20px;
+}
+
+.functions {
+    text-align: center;
+}
+
+/* #ujdoksi_form input, #ujdoksi_form select, #ujdoksi_form textarea {
+    margin-top: 10px;    
+} */
+
+form div[class*="row"] {
+    margin-top: 10px;    
+}
+
+form .row>div>label, form .row>label {
+    font-weight: bold;
+}
+
+main .table, main h3 {
+    width: 100%;
+    margin-left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}  
+
+main button {
+    margin: 10px 0;
+    border-radius: 20px 0;
+}
+
+@media screen and (min-width:1200px) {
+    main button {     
+        width: 160px;  
+        margin-left: 50px;         
+        padding: 10px;       
+    }
+    main .table, main h3 {
+        margin-left: 50px;
+        width: 90%; 
+        padding-top: 10px;
+        padding-bottom: 10px;       
+    }
+}

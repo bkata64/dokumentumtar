@@ -1,8 +1,9 @@
 <? 
-include_once('php/routing.php');
+include_once('Core/routing.php');
 
-$msg->messages();
+// $msg->messages();
 
-include_once($content);
+// include_once($content);
+$object->getContent();
 
 ?>

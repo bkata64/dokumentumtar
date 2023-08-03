@@ -1,1 +1,215 @@
-első log bejegyzésünk!!első log bejegyzésünk!!
+első log bejegyzésünk!!első log bejegyzésünk!!Nem található a backendd metódusNem található a backendd metódusNem található ez a fájl: Controller/Archive.php! Nem található ez a fájl: Controller/Library.php! 
+A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!Nem található a keresett documen metódus! A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!A kapott adatsor invalid! <br>Nincs ilyen kiadó!A kapott adatsor invalid! <br>Nincs ilyen kiadó!A kapott adatsor invalid! <br>Nincs ilyen kiadó!A kapott adatsor invalid! <br>Nincs ilyen kiadó!A kapott adatsor invalid! <br>Nincs ilyen kiadó!A kapott adatsor invalid! <br>Nincs ilyen kiadó!A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!
+A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!Nem megfelelő url! Nincs megjelölve osztálynév! Nem található ez a fájl: Controller/Frontend.php! Nem található ez a fájl: Controller/Admin.php! Nem található a keresett frontend metódus! A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!
+A kapott adatsor invalid! <br>A rövid szöveg mező kitöltése kötelező!\nA kapott adatsor invalid! <br>A rövid szöveg mező kitöltése kötelező!
+A kapott adatsor invalid! <br>A rövid szöveg mező kitöltése kötelező!
+A kapott adatsor invalid! <br>A rövid szöveg mező kitöltése kötelező!
+A kapott adatsor invalid! <br>A cím mező kitöltése kötelező!
+A kapott adatsor invalid! <br>Nincs ilyen kategória!
+A kapott adatsor invalid! <br>A rövid szöveg mező kitöltése kötelező!
+A kapott adatsor invalid! <br>A rövid szöveg mező kitöltése kötelező!
+A kapott adatsor invalid! <br>Nincs ilyen kategória!Nem található a keresett dokument metódus! 
+A kapott adatsor invalid! <br>A rövid szöveg mező kitöltése kötelező!
+A kapott adatsor invalid! <br>A rövid szöveg mező kitöltése kötelező!Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, group_concat(c.id SEPARATOR ', ') AS category_ids, d.publisher_id, p.name AS publisher, short_text, logo_url, content, d.role_id, r.name AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.id = 24 and b.active = 1
+                            GROUP BY d.title
+                            LIMIT 1;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, group_concat(c.id SEPARATOR ', ') AS category_ids, d.publisher_id, p.name AS publisher, short_text, logo_url, content, d.role_id, r.name AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.id = 24 and b.active = 1
+                            GROUP BY d.title
+                            LIMIT 1;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, group_concat(c.id SEPARATOR ', ') AS category_ids, d.publisher_id, p.name AS publisher, short_text, logo_url, content, d.role_id, r.name AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.id = 24 and b.active = 1
+                            GROUP BY d.title
+                            LIMIT 1;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, group_concat(c.id SEPARATOR ', ') AS category_ids, d.publisher_id, p.name AS publisher, short_text, logo_url, content, d.role_id, r.name AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.id = 24 and b.active = 1
+                            GROUP BY d.title
+                            LIMIT 1;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, group_concat(c.id SEPARATOR ', ') AS category_ids, d.publisher_id, p.name AS publisher, short_text, logo_url, content, d.role_id, r.name AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.id = 24 and b.active = 1
+                            GROUP BY d.title
+                            LIMIT 1;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, group_concat(c.id SEPARATOR ', ') AS category_ids, d.publisher_id, p.name AS publisher, short_text, logo_url, content, d.role_id, r.name AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.id = 24 and b.active = 1
+                            GROUP BY d.title
+                            LIMIT 1;
+A kapott adatsor invalid! <br>A jelszó hossza 8 és 20 között legyen!
+A kapott adatsor invalid! <br>A jelszó hossza 8 és 20 között legyen!
+A kapott adatsor invalid! <br>A jelszó hossza 8 és 20 között legyen!
+A kapott adatsor invalid! <br>Az jogosultság azonosítója nem szám típusú!
+A kapott adatsor invalid! <br>Az jogosultság azonosítója nem szám típusú!Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE id = 4Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE id = 4Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE id = 4Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE id = 4Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE id = 4Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE id = 4Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%%' and lower(category) like '%utas%'
+                            GROUP BY d.title;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%%' and lower(category) like '%utas%'
+                            GROUP BY d.title;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%%' and lower(category) like '%utas%'
+                            GROUP BY d.title;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%%' and lower(category) like '%utas%'
+                            GROUP BY d.title;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%%'
+                            GROUP BY d.title;
+                            HAVING lower(category) like '%utas%'Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%%'
+                            GROUP BY d.title;
+                            HAVING lower(category) like '%utas%'Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%xxx%'
+                            GROUP BY d.title
+                            HAVING lower(category) like '%terv%';Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%xxx%'
+                            GROUP BY d.title
+                            HAVING lower(category) like '%terv%';Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%xxx%'
+                            GROUP BY d.title
+                            HAVING lower(category) like '%terv%';Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%xxx%'
+                            GROUP BY d.title
+                            HAVING lower(category) like '%terv%';Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%xxx%'
+                            GROUP BY d.title
+                            HAVING lower(category) like '%terv%';Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%xxx%'
+                            GROUP BY d.title
+                            HAVING lower(category) like '%terv%';Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%xxx%'
+                            GROUP BY d.title
+                            HAVING lower(category) like '%terv%';Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 and lower(d.title) like '%xxx%'
+                            GROUP BY d.title
+                            HAVING lower(category) like '%terv%';Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE u.username = Kata and u.active = 1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE u.username = Kata and u.active = 1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE u.username = kata and u.active = 1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE u.username = kata and u.active = 1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE u.username = kata and u.active = 1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE u.username = kata and u.active = 1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE u.username = 'gdggdfg' and u.active = 1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT u.id, u.name, username, password, u.role_id, r.name AS role FROM users u
+                        LEFT JOIN roles r ON r.id = u.role_id WHERE u.username = 'gdggdfg' and u.active = 1
+A kapott adatsor invalid! <br>A jelszó mező kitöltése kötelező!Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 1 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 1 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 1 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 1 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 2 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 2 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 3 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 3 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 2 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT id, name FROM roles WHERE id = 2 active=1Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 AND role = 'bárki' 
+                            GROUP BY d.title;Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 
+                            GROUP BY d.title
+                            HAVING role = 'bárki' OR role = '{role};Nem talált értéket a lekérdezés!  -- SQL QUERY: SELECT d.id, title, group_concat(c.name SEPARATOR ', ') AS category, p.name AS publisher, short_text, content, coalesce(r.name, 'bárki') AS role
+                            FROM documents d 
+                            LEFT JOIN publishers p ON p.id = d.publisher_id 
+                            LEFT JOIN categories_documents cd ON cd.document_id = d.id 
+                            LEFT JOIN categories c ON c.id = cd.category_id
+                            LEFT JOIN roles r ON r.id = d.role_id
+                            WHERE d.active = 1 
+                            GROUP BY d.title
+                            HAVING role = 'bárki' OR role = '{role};
